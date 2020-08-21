@@ -1,0 +1,14 @@
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\MarketAnalyst.deps.json
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\MarketAnalyst.runtimeconfig.json
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\MarketAnalyst.runtimeconfig.dev.json
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\MarketAnalyst.dll
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\MarketAnalyst.pdb
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.csprojAssemblyReference.cache
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.csproj.CoreCompileInputs.cache
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.RazorAssemblyInfo.cache
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.RazorAssemblyInfo.cs
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.AssemblyInfoInputs.cache
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.AssemblyInfo.cs
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.RazorTargetAssemblyInfo.cache
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.dll
+E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.pdb
