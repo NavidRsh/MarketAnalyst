@@ -7,3 +7,12 @@ E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netsta
 E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst.Core\bin\Debug\netstandard2.0\MarketAnalyst.Core.pdb
 E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.dll
 E:\Tasks\Stocks\MarketAnalyzer\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.pdb
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\bin\Debug\netstandard2.0\MarketAnalyst.Core.deps.json
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\bin\Debug\netstandard2.0\MarketAnalyst.Core.dll
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\bin\Debug\netstandard2.0\MarketAnalyst.Core.pdb
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.csprojAssemblyReference.cache
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.csproj.CoreCompileInputs.cache
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.AssemblyInfoInputs.cache
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.AssemblyInfo.cs
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.dll
+E:\Main\AlborzDistribution\Tasks\MarketAnalyst\MarketAnalyst\MarketAnalyst.Core\obj\Debug\netstandard2.0\MarketAnalyst.Core.pdb

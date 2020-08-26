@@ -26,5 +26,14 @@ namespace MarketAnalyst.Api.Controllers
                
             }));
         }
+
+        [HttpPost("UpdateDailyPrice")]
+        public async Task<IActionResult> UpdateDailyPrice()
+        {
+            return Ok(await _mediator.Send(new UpdateDailyPriceCommand()
+            {
+
+            }));
+        }
     }
 }
