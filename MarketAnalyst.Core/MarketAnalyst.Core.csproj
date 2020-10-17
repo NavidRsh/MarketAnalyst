@@ -5,11 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Dtos\DataCollection\" />
+    <Folder Include="Helpers\" />
     <Folder Include="Services\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AngleSharp.Js" Version="0.14.0" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
     <PackageReference Include="MediatR" Version="8.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />

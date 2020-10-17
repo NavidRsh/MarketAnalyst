@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "6a107455de6943ad54ec8c0f39f140ed4a47c5d5"
+    "signature": "9b10a747d9cbfdb7f40762466de4ce19c4a91ce6"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MarketAnalyst.Core/1.0.0": {
         "dependencies": {
+          "AngleSharp.Js": "0.14.0",
           "HtmlAgilityPack": "1.11.24",
           "MediatR": "8.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "8.1.0",
@@ -23,11 +24,48 @@
           "MarketAnalyst.Core.dll": {}
         }
       },
+      "AngleSharp/0.14.0": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        }
+      },
+      "AngleSharp.Js/0.14.0": {
+        "dependencies": {
+          "AngleSharp": "0.14.0",
+          "jint": "2.10.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.Js.dll": {
+            "assemblyVersion": "0.14.0.0",
+            "fileVersion": "0.14.0.0"
+          }
+        }
+      },
       "HtmlAgilityPack/1.11.24": {
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
             "assemblyVersion": "1.11.24.0",
             "fileVersion": "1.11.24.0"
+          }
+        }
+      },
+      "jint/2.10.4": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.TypeExtensions": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/jint.dll": {
+            "assemblyVersion": "2.10.4.0",
+            "fileVersion": "2.10.4.0"
           }
         }
       },
@@ -879,6 +917,17 @@
           }
         }
       },
+      "System.Diagnostics.Contracts/4.0.1": {
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Diagnostics.Contracts.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "1.0.24212.1"
+          }
+        }
+      },
       "System.Diagnostics.Debug/4.0.11": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1391,12 +1440,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AngleSharp/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
+      "path": "anglesharp/0.14.0",
+      "hashPath": "anglesharp.0.14.0.nupkg.sha512"
+    },
+    "AngleSharp.Js/0.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mwhy38TwZQ8VZRb0qSRXZ2zwdbkmTUI/c+m1iPfmYmV/7BnIRHzgY3OBHpm0ZcLROZ7oGAMz29hDw31J3CfJgg==",
+      "path": "anglesharp.js/0.14.0",
+      "hashPath": "anglesharp.js.0.14.0.nupkg.sha512"
+    },
     "HtmlAgilityPack/1.11.24": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-DLcytINO8EfCdBgMGsaz8Tvdgu2Aewoo2XX7WfZuRG9cBQRtbm8JZ4/sMRtFvzehjdIDqubdlQb8TqNfjRMEWg==",
       "path": "htmlagilitypack/1.11.24",
       "hashPath": "htmlagilitypack.1.11.24.nupkg.sha512"
+    },
+    "jint/2.10.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PJ20tSyhW0AafikDa2CpiGv5c5DZ9Q20v7EXRiCLl+G+MNoMpggAeW0T03S/xUk6rj1zl29HbfpsVWlcq6DEDA==",
+      "path": "jint/2.10.4",
+      "hashPath": "jint.2.10.4.nupkg.sha512"
     },
     "MediatR/8.1.0": {
       "type": "package",
@@ -1632,56 +1702,56 @@
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CTUFXZtUfx/rJMl3ep1E3KA7siGDEdm1QRA8ckrbeltEfr+Hs5DbytuTgPBf/Kyssv061zjyhcsl9w3LJMarmw==",
+      "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "path": "microsoft.extensions.apidescription.server/3.0.0",
       "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3phHFN5lXktB6Id1D0tvojf9GohSyoTwCadVZmCeKEDVj2u2xR3hLtj+lf9mpmCC5FuLbcyVjepZgFFHazHjIA==",
+      "sha512": "sha512-spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
       "path": "microsoft.extensions.caching.abstractions/2.2.0",
       "hashPath": "microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Memory/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dPJ4f6vOg9WdgWyrMMU5rRhOyQ7DxM7Ivxx8z80NeF2Xygi9g51MuxMOaZwxNClDcxvJ6ZsPKBH61B54LrnYRA==",
+      "sha512": "sha512-yFs44RzB2Pzfoj4uk+mEz3MTTQKyeWb8gDhv5GyVPfHnLv0eQhGwzbw/5WpxAcVyOgG/H3/0ULY6g0/7/B+r7w==",
       "path": "microsoft.extensions.caching.memory/2.2.0",
       "hashPath": "microsoft.extensions.caching.memory.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Be1LEgclOQthHN7tksm79bGbXNJ0yuewEBiIzPSePwDwt2AGqLLx5iXv6BfjVZGztxKQCngz+X8IRw/kOz+CwA==",
+      "sha512": "sha512-nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
       "path": "microsoft.extensions.configuration/2.2.0",
       "hashPath": "microsoft.extensions.configuration.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HT/cMUOHvJ29Z5VIlWp6Zd1F63k5CbpGisNk8ayP35GwKwX5IDsJL8hWMoBesz5WPK8ZfW4f47kyVAhfCD/PAw==",
+      "sha512": "sha512-65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
       "path": "microsoft.extensions.configuration.abstractions/2.2.0",
       "hashPath": "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration.Binder/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MsSglnpg/8FoukGJ5CBKFxs2enCwrRd3ORx8bmhe3PHekeJeUzqhkQoOaAqyAt9wcF+myRTe1JcHLul4zj+zPA==",
+      "sha512": "sha512-vJ9xvOZCnUAIHcGC3SU35r3HKmHTVIeHzo6u/qzlHAqD8m6xv92MLin4oJntTvkpKxVX3vI1GFFkIQtU3AdlsQ==",
       "path": "microsoft.extensions.configuration.binder/2.2.0",
       "hashPath": "microsoft.extensions.configuration.binder.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7JzIJyfA1Wr19ibRr67CoG3lFklnTkzhkJ6thWFcNrmZCgLf9oEqrED4Tz08y7F18wTWsWUnI52BCjraBGtPIA==",
+      "sha512": "sha512-MZtBIwfDFork5vfjpJdG5g8wuJFt7d/y3LOSVVtDK/76wlbtz6cjltfKHqLx2TKVqTj5/c41t77m1+h20zqtPA==",
       "path": "microsoft.extensions.dependencyinjection/2.2.0",
       "hashPath": "microsoft.extensions.dependencyinjection.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YZcHF0/+XeKv12ZEo+OmrAa6rNayjye0qvEjYSDIhN99StqxnS2gZpwkcCrH/8JuXxzzcDSVpZw5Bruz8xYfXQ==",
+      "sha512": "sha512-f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512"
     },
@@ -1730,14 +1800,14 @@
     "Microsoft.Extensions.Logging/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-K90QPI39Sq4mNb0Femo/xV/YGj8KHpAOyqEqChloxteM021SAnFV+kxjUKMJqrvpTcMJiGPmv1Yj03QeiXatRg==",
+      "sha512": "sha512-Nxqhadc9FCmFHzU+fz3oc8sFlE6IadViYg8dfUdGzJZ2JUxnCsRghBhhOWdM4B2zSZqEc+0BjliBh/oNdRZuig==",
       "path": "microsoft.extensions.logging/2.2.0",
       "hashPath": "microsoft.extensions.logging.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Abstractions/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9/ERS0/w8MRdWYC9Nv230+2DIYbCv+jr5JwlVyFXrNRerKN9mHShlSfCUjq2S9Wa8ORsztbe5Txz2CuA8pr2bA==",
+      "sha512": "sha512-B2WqEox8o+4KUOpL7rZPyh6qYjik8tHi2tN8Z9jZkHzED8ElYgZa/h6K+xliB435SqUcWT290Fr2aa8BtZjn8A==",
       "path": "microsoft.extensions.logging.abstractions/2.2.0",
       "hashPath": "microsoft.extensions.logging.abstractions.2.2.0.nupkg.sha512"
     },
@@ -1751,14 +1821,14 @@
     "Microsoft.Extensions.Options/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-onhaA2X0DkQmyybJhbTHO+63NnO90nIPHTC9a+1QLTM1hT934DM80OvgwKubEIQuPyvSHD6X1Q01PSTJRNHo8w==",
+      "sha512": "sha512-UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
       "path": "microsoft.extensions.options/2.2.0",
       "hashPath": "microsoft.extensions.options.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Sv8EDHvN2852bE5G1yosKCa7sUw/x0Z/rCaI5LIWHseAXprG1h9oberAh3NRBO7w2zTZq79WPeQDMsPBVSf99w==",
+      "sha512": "sha512-azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
       "path": "microsoft.extensions.primitives/2.2.0",
       "hashPath": "microsoft.extensions.primitives.2.2.0.nupkg.sha512"
     },
@@ -1842,7 +1912,7 @@
     "runtime.native.System.Data.SqlClient.sni/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zmr7mxqvG7M7qWzPTHQEF0jIOo65vqsnaJ2s7AyZ9JQaSJ3rfXZ7vPGszw1EbvRATu6zsFMdpQeq1g7oaNocOg==",
+      "sha512": "sha512-AJfX7owAAkMjWQYhoml5IBfXh8UyYPjktn8pK0BFGAdKgBS7HqMz1fw5vdzfZUWfhtTPDGCjgNttt46ZyEmSjg==",
       "path": "runtime.native.system.data.sqlclient.sni/4.5.0",
       "hashPath": "runtime.native.system.data.sqlclient.sni.4.5.0.nupkg.sha512"
     },
@@ -1940,9 +2010,16 @@
     "System.Data.SqlClient/4.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cppLAiY36su7Hr9dOaeDXRkndLKtnh7HgQgOfAgV0oN764BQXShll7yBZ8OwPtdYUSuwTT0re7eDQPGhwnojVQ==",
+      "sha512": "sha512-gwItUWW1BMCckicFO85c8frFaMK8SGqYn5IeA3GSX4Lmid+CjXETfoHz7Uv+Vx6L0No7iRc/7cBL8gd6o9k9/g==",
       "path": "system.data.sqlclient/4.6.0",
       "hashPath": "system.data.sqlclient.4.6.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Contracts/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HvQQjy712vnlpPxaloZYkuE78Gn353L0SJLJVeLcNASeg9c4qla2a1Xq8I7B3jZoDzKPtHTkyVO7AZ5tpeQGuA==",
+      "path": "system.diagnostics.contracts/4.0.1",
+      "hashPath": "system.diagnostics.contracts.4.0.1.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.0.11": {
       "type": "package",
@@ -1982,7 +2059,7 @@
     "System.Interactive.Async/3.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
+      "sha512": "sha512-C07p0dAA5lGqYUPiPCK3paR709gqS4aMDDsje0v0pvffwzLaxmsn5YQTfZbyNG5qrudPx+BCxTqISnncQ3wIoQ==",
       "path": "system.interactive.async/3.2.0",
       "hashPath": "system.interactive.async.3.2.0.nupkg.sha512"
     },

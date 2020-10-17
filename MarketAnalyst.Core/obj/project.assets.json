@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "AngleSharp/0.14.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.dll": {}
+        }
+      },
+      "AngleSharp.Js/0.14.0": {
+        "type": "package",
+        "dependencies": {
+          "AngleSharp": "0.14.0",
+          "Jint": "2.10.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/AngleSharp.Js.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AngleSharp.Js.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.11.24": {
         "type": "package",
         "compile": {
@@ -9,6 +34,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
+        }
+      },
+      "jint/2.10.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reflection.TypeExtensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/jint.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/jint.dll": {}
         }
       },
       "MediatR/8.1.0": {
@@ -1042,6 +1082,18 @@
           }
         }
       },
+      "System.Diagnostics.Contracts/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Diagnostics.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Diagnostics.Contracts.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -1512,7 +1564,7 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
@@ -1671,6 +1723,48 @@
     }
   },
   "libraries": {
+    "AngleSharp/0.14.0": {
+      "sha512": "34w9I7nyszfEYBY8g7T3B0AtWlOivNh+QoWc3KECRwbmcNyqWmb4huihtmpH2Ds7rIRRHMMPv9yfPBxxjBn03g==",
+      "type": "package",
+      "path": "anglesharp/0.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "anglesharp.0.14.0.nupkg.sha512",
+        "anglesharp.nuspec",
+        "lib/net46/AngleSharp.dll",
+        "lib/net46/AngleSharp.xml",
+        "lib/net461/AngleSharp.dll",
+        "lib/net461/AngleSharp.xml",
+        "lib/net472/AngleSharp.dll",
+        "lib/net472/AngleSharp.xml",
+        "lib/netstandard1.3/AngleSharp.dll",
+        "lib/netstandard1.3/AngleSharp.xml",
+        "lib/netstandard2.0/AngleSharp.dll",
+        "lib/netstandard2.0/AngleSharp.xml"
+      ]
+    },
+    "AngleSharp.Js/0.14.0": {
+      "sha512": "mwhy38TwZQ8VZRb0qSRXZ2zwdbkmTUI/c+m1iPfmYmV/7BnIRHzgY3OBHpm0ZcLROZ7oGAMz29hDw31J3CfJgg==",
+      "type": "package",
+      "path": "anglesharp.js/0.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "anglesharp.js.0.14.0.nupkg.sha512",
+        "anglesharp.js.nuspec",
+        "lib/net46/AngleSharp.Js.dll",
+        "lib/net46/AngleSharp.Js.xml",
+        "lib/net461/AngleSharp.Js.dll",
+        "lib/net461/AngleSharp.Js.xml",
+        "lib/net472/AngleSharp.Js.dll",
+        "lib/net472/AngleSharp.Js.xml",
+        "lib/netstandard1.3/AngleSharp.Js.dll",
+        "lib/netstandard1.3/AngleSharp.Js.xml",
+        "lib/netstandard2.0/AngleSharp.Js.dll",
+        "lib/netstandard2.0/AngleSharp.Js.xml"
+      ]
+    },
     "HtmlAgilityPack/1.11.24": {
       "sha512": "DLcytINO8EfCdBgMGsaz8Tvdgu2Aewoo2XX7WfZuRG9cBQRtbm8JZ4/sMRtFvzehjdIDqubdlQb8TqNfjRMEWg==",
       "type": "package",
@@ -1717,6 +1811,20 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
+      ]
+    },
+    "jint/2.10.4": {
+      "sha512": "PJ20tSyhW0AafikDa2CpiGv5c5DZ9Q20v7EXRiCLl+G+MNoMpggAeW0T03S/xUk6rj1zl29HbfpsVWlcq6DEDA==",
+      "type": "package",
+      "path": "jint/2.10.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jint.2.10.4.nupkg.sha512",
+        "jint.nuspec",
+        "lib/net45/jint.dll",
+        "lib/netstandard1.3/jint.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/jint.dll"
       ]
     },
     "MediatR/8.1.0": {
@@ -2237,7 +2345,7 @@
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
-      "sha512": "CTUFXZtUfx/rJMl3ep1E3KA7siGDEdm1QRA8ckrbeltEfr+Hs5DbytuTgPBf/Kyssv061zjyhcsl9w3LJMarmw==",
+      "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "type": "package",
       "path": "microsoft.extensions.apidescription.server/3.0.0",
       "hasTools": true,
@@ -2264,7 +2372,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
-      "sha512": "3phHFN5lXktB6Id1D0tvojf9GohSyoTwCadVZmCeKEDVj2u2xR3hLtj+lf9mpmCC5FuLbcyVjepZgFFHazHjIA==",
+      "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/2.2.0",
       "files": [
@@ -2277,7 +2385,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Memory/2.2.0": {
-      "sha512": "dPJ4f6vOg9WdgWyrMMU5rRhOyQ7DxM7Ivxx8z80NeF2Xygi9g51MuxMOaZwxNClDcxvJ6ZsPKBH61B54LrnYRA==",
+      "sha512": "yFs44RzB2Pzfoj4uk+mEz3MTTQKyeWb8gDhv5GyVPfHnLv0eQhGwzbw/5WpxAcVyOgG/H3/0ULY6g0/7/B+r7w==",
       "type": "package",
       "path": "microsoft.extensions.caching.memory/2.2.0",
       "files": [
@@ -2290,7 +2398,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration/2.2.0": {
-      "sha512": "Be1LEgclOQthHN7tksm79bGbXNJ0yuewEBiIzPSePwDwt2AGqLLx5iXv6BfjVZGztxKQCngz+X8IRw/kOz+CwA==",
+      "sha512": "nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
       "type": "package",
       "path": "microsoft.extensions.configuration/2.2.0",
       "files": [
@@ -2303,7 +2411,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
-      "sha512": "HT/cMUOHvJ29Z5VIlWp6Zd1F63k5CbpGisNk8ayP35GwKwX5IDsJL8hWMoBesz5WPK8ZfW4f47kyVAhfCD/PAw==",
+      "sha512": "65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
       "type": "package",
       "path": "microsoft.extensions.configuration.abstractions/2.2.0",
       "files": [
@@ -2316,7 +2424,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Binder/2.2.0": {
-      "sha512": "MsSglnpg/8FoukGJ5CBKFxs2enCwrRd3ORx8bmhe3PHekeJeUzqhkQoOaAqyAt9wcF+myRTe1JcHLul4zj+zPA==",
+      "sha512": "vJ9xvOZCnUAIHcGC3SU35r3HKmHTVIeHzo6u/qzlHAqD8m6xv92MLin4oJntTvkpKxVX3vI1GFFkIQtU3AdlsQ==",
       "type": "package",
       "path": "microsoft.extensions.configuration.binder/2.2.0",
       "files": [
@@ -2329,7 +2437,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.2.0": {
-      "sha512": "7JzIJyfA1Wr19ibRr67CoG3lFklnTkzhkJ6thWFcNrmZCgLf9oEqrED4Tz08y7F18wTWsWUnI52BCjraBGtPIA==",
+      "sha512": "MZtBIwfDFork5vfjpJdG5g8wuJFt7d/y3LOSVVtDK/76wlbtz6cjltfKHqLx2TKVqTj5/c41t77m1+h20zqtPA==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.2.0",
       "files": [
@@ -2346,7 +2454,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.2.0": {
-      "sha512": "YZcHF0/+XeKv12ZEo+OmrAa6rNayjye0qvEjYSDIhN99StqxnS2gZpwkcCrH/8JuXxzzcDSVpZw5Bruz8xYfXQ==",
+      "sha512": "f9hstgjVmr6rmrfGSpfsVOl2irKAgr1QjrSi3FgnS7kulxband50f2brRLwySAQTADPZeTdow0mpSMcoAdadCw==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.2.0",
       "files": [
@@ -2446,7 +2554,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/2.2.0": {
-      "sha512": "K90QPI39Sq4mNb0Femo/xV/YGj8KHpAOyqEqChloxteM021SAnFV+kxjUKMJqrvpTcMJiGPmv1Yj03QeiXatRg==",
+      "sha512": "Nxqhadc9FCmFHzU+fz3oc8sFlE6IadViYg8dfUdGzJZ2JUxnCsRghBhhOWdM4B2zSZqEc+0BjliBh/oNdRZuig==",
       "type": "package",
       "path": "microsoft.extensions.logging/2.2.0",
       "files": [
@@ -2459,7 +2567,7 @@
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/2.2.0": {
-      "sha512": "9/ERS0/w8MRdWYC9Nv230+2DIYbCv+jr5JwlVyFXrNRerKN9mHShlSfCUjq2S9Wa8ORsztbe5Txz2CuA8pr2bA==",
+      "sha512": "B2WqEox8o+4KUOpL7rZPyh6qYjik8tHi2tN8Z9jZkHzED8ElYgZa/h6K+xliB435SqUcWT290Fr2aa8BtZjn8A==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/2.2.0",
       "files": [
@@ -2485,7 +2593,7 @@
       ]
     },
     "Microsoft.Extensions.Options/2.2.0": {
-      "sha512": "onhaA2X0DkQmyybJhbTHO+63NnO90nIPHTC9a+1QLTM1hT934DM80OvgwKubEIQuPyvSHD6X1Q01PSTJRNHo8w==",
+      "sha512": "UpZLNLBpIZ0GTebShui7xXYh6DmBHjWM8NxGxZbdQh/bPZ5e6YswqI+bru6BnEL5eWiOdodsXtEz3FROcgi/qg==",
       "type": "package",
       "path": "microsoft.extensions.options/2.2.0",
       "files": [
@@ -2498,7 +2606,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {
-      "sha512": "Sv8EDHvN2852bE5G1yosKCa7sUw/x0Z/rCaI5LIWHseAXprG1h9oberAh3NRBO7w2zTZq79WPeQDMsPBVSf99w==",
+      "sha512": "azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
       "type": "package",
       "path": "microsoft.extensions.primitives/2.2.0",
       "files": [
@@ -2827,7 +2935,7 @@
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.5.0": {
-      "sha512": "zmr7mxqvG7M7qWzPTHQEF0jIOo65vqsnaJ2s7AyZ9JQaSJ3rfXZ7vPGszw1EbvRATu6zsFMdpQeq1g7oaNocOg==",
+      "sha512": "AJfX7owAAkMjWQYhoml5IBfXh8UyYPjktn8pK0BFGAdKgBS7HqMz1fw5vdzfZUWfhtTPDGCjgNttt46ZyEmSjg==",
       "type": "package",
       "path": "runtime.native.system.data.sqlclient.sni/4.5.0",
       "files": [
@@ -3224,7 +3332,7 @@
       ]
     },
     "System.Data.SqlClient/4.6.0": {
-      "sha512": "cppLAiY36su7Hr9dOaeDXRkndLKtnh7HgQgOfAgV0oN764BQXShll7yBZ8OwPtdYUSuwTT0re7eDQPGhwnojVQ==",
+      "sha512": "gwItUWW1BMCckicFO85c8frFaMK8SGqYn5IeA3GSX4Lmid+CjXETfoHz7Uv+Vx6L0No7iRc/7cBL8gd6o9k9/g==",
       "type": "package",
       "path": "system.data.sqlclient/4.6.0",
       "files": [
@@ -3295,6 +3403,66 @@
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Diagnostics.Contracts/4.0.1": {
+      "sha512": "HvQQjy712vnlpPxaloZYkuE78Gn353L0SJLJVeLcNASeg9c4qla2a1Xq8I7B3jZoDzKPtHTkyVO7AZ5tpeQGuA==",
+      "type": "package",
+      "path": "system.diagnostics.contracts/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Diagnostics.Contracts.dll",
+        "lib/netstandard1.0/System.Diagnostics.Contracts.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Diagnostics.Contracts.dll",
+        "ref/netcore50/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/de/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/es/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/fr/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/it/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ja/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ko/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ru/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/zh-hans/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/zh-hant/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/System.Diagnostics.Contracts.dll",
+        "ref/netstandard1.0/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/de/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/es/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/fr/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/it/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ja/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ko/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ru/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/zh-hans/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/zh-hant/System.Diagnostics.Contracts.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Diagnostics.Contracts.dll",
+        "system.diagnostics.contracts.4.0.1.nupkg.sha512",
+        "system.diagnostics.contracts.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.0.11": {
@@ -3583,7 +3751,7 @@
       ]
     },
     "System.Interactive.Async/3.2.0": {
-      "sha512": "T3nigy9yShklMyVu7I2TvlVMRy2vUn9oQeBaRy0KZcOptyy+rUbekYaXxoa3s0h2tWT3UVtzrGkQC89CBbCtlg==",
+      "sha512": "C07p0dAA5lGqYUPiPCK3paR709gqS4aMDDsje0v0pvffwzLaxmsn5YQTfZbyNG5qrudPx+BCxTqISnncQ3wIoQ==",
       "type": "package",
       "path": "system.interactive.async/3.2.0",
       "files": [
@@ -5634,6 +5802,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "AngleSharp.Js >= 0.14.0",
       "HtmlAgilityPack >= 1.11.24",
       "MediatR >= 8.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 8.1.0",
@@ -5646,23 +5815,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alborz\\.nuget\\packages\\": {},
+    "C:\\Users\\Navid\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Main\\AlborzDistribution\\Tasks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+      "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
       "projectName": "MarketAnalyst.Core",
-      "projectPath": "E:\\Main\\AlborzDistribution\\Tasks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
-      "packagesPath": "C:\\Users\\Alborz\\.nuget\\packages\\",
-      "outputPath": "E:\\Main\\AlborzDistribution\\Tasks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
+      "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+      "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
+      "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alborz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5686,6 +5855,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "AngleSharp.Js": {
+            "target": "Package",
+            "version": "[0.14.0, )"
+          },
           "HtmlAgilityPack": {
             "target": "Package",
             "version": "[1.11.24, )"

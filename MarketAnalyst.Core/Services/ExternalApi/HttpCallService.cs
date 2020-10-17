@@ -17,7 +17,7 @@ namespace MarketAnalyst.Core.Services.ExternalApi
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-            request.Timeout = 20000;
+            request.Timeout = 200000;
 
             if (headers != null)
                 foreach (KeyValuePair<string, string> entry in headers)

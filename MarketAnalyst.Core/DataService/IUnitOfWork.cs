@@ -11,8 +11,8 @@ namespace MarketAnalyst.Core.DataService
         Task SaveAsync();
         Task<T> SaveAsync<T>(AddItemResult<T> item);
         General.StockService StockService { get; }
-
         General.StockGroupService StockGroupService { get; }
+        General.StocksDailyPriceService StocksDailyPriceService { get; }
     }
 
     public class AddItemResult<T>

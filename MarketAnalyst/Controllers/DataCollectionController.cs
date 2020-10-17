@@ -18,6 +18,10 @@ namespace MarketAnalyst.Api.Controllers
         {
             _mediator = mediator;
         }
+        /// <summary>
+        /// نام و اطلاعات نمادهای بورس پایه رو فراخوانی میکند
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("UpdateStocksInfo")]
         public async Task<IActionResult> UpdateStocksInfo()
         {
@@ -26,11 +30,37 @@ namespace MarketAnalyst.Api.Controllers
                
             }));
         }
+        /// <summary>
+        /// از طریق پربیننده های فرابورس اطلاعات رو بازیابی می کند
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost("UpdatePopularStocksInfo")]
+        public async Task<IActionResult> UpdatePopularStocksInfo()
+        {
+            return Ok(await _mediator.Send(new UpdatePopularStocksInfoCommand()
+            {
 
+            }));
+        }
+
+
+        /// <summary>
+        /// از طریق صفحه سابقه نماد اطلاعات روزانه نماد را میگیرد
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("UpdateDailyPrice")]
         public async Task<IActionResult> UpdateDailyPrice()
         {
             return Ok(await _mediator.Send(new UpdateDailyPriceCommand()
+            {
+
+            }));
+        }
+
+        [HttpPost("CalculateBuyingPowerHourly")]
+        public async Task<IActionResult> CalculateBuyingPowerHourly()
+        {
+            return Ok(await _mediator.Send(new CalculateBuyingPowerHourlyCommand()
             {
 
             }));

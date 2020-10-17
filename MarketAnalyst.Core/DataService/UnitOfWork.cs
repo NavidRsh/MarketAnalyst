@@ -14,7 +14,8 @@ namespace MarketAnalyst.Core.DataService
             _context = context;
         }
         public General.StockService StockService => new General.StockService(_context);
-        public General.StockGroupService StockGroupService => new General.StockGroupService(_context); 
+        public General.StockGroupService StockGroupService => new General.StockGroupService(_context);
+        public General.StocksDailyPriceService StocksDailyPriceService => new General.StocksDailyPriceService(_context);
         public async Task SaveAsync()
         {
             //try

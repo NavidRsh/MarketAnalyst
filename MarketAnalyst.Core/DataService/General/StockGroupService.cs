@@ -21,9 +21,14 @@ namespace MarketAnalyst.Core.DataService.General
         {
             await _context.StockGroups.AddAsync(StockGroup);            
         }
+        public void UpdateConnected(Data.General.StockGroup StockGroup)
+        {
+            _context.Entry(StockGroup).State = EntityState.Modified;
+        }
         public async Task<StockGroup> FindAsync(string groupName)
         {
-            return await _context.StockGroups.Where(a => a.Name.Equals(groupName, StringComparison.InvariantCultureIgnoreCase))
+            return await _context.StockGroups
+                .Where(a => a.Name.Equals(groupName, StringComparison.InvariantCultureIgnoreCase))
                 .FirstOrDefaultAsync(); 
         }
         public bool DeleteAll()

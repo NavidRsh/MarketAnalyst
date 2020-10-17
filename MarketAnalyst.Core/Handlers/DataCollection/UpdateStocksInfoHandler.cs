@@ -32,7 +32,7 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
 
                 HtmlNode tableElement = pageDocument.GetElementbyId("tblToGrid");
 
-                _unitOfWork.StockService.DeleteAll();
+                _unitOfWork.StockService.DeleteAll(Enums.MarketTypeEnum.Boors);
                 foreach (HtmlNode rowElement in tableElement.ChildNodes)
                 {
 
@@ -42,6 +42,11 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                         string code = items[0].InnerText;
                         if (!ContainsUnicodeCharacter(code))
                         {
+                            string url = "";
+                            foreach (var atag in items[0].ChildNodes)
+                            {
+                                url = atag.Attributes["href"].Value;
+                            }
                             string groupName = items[2].InnerText;
                             var group = await _unitOfWork.StockGroupService.FindAsync(groupName);
                             int stockGroupId = 0;
@@ -51,19 +56,19 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                 {
                                     Code = "",
                                     Name = groupName
-                                }; 
+                                };
                                 await _unitOfWork.StockGroupService.Add(grp);
                                 await _unitOfWork.SaveAsync();
-                                stockGroupId = grp.Id; 
+                                stockGroupId = grp.Id;
                             }
                             else
                             {
-                                stockGroupId = group.Id; 
+                                stockGroupId = group.Id;
                             }
                             await _unitOfWork.StockService.Add(new Data.General.Stock()
                             {
-                                Code = code, 
-                                StockGroupId = stockGroupId,
+                                Code = code,
+                                StockGroupId = stockGroupId,                                
                                 EnglishSign = items[4].InnerText,
                                 EnglishName = items[5].InnerText,
                                 PersianSign = items[6].InnerText,

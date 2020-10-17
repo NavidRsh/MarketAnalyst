@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MarketAnalyst.Core.Commands.DataCollection
 {
-    public class UpdateDailyPriceCommand : IRequest<GenericBoolResponse>
+    public class UpdateDailyPriceCommand:IRequest<GenericBoolResponse>
     {
        
     }

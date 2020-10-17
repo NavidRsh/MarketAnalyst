@@ -26,11 +26,14 @@ namespace MarketAnalyst.Core.Data
         public DbSet<StockGroup> StockGroups { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<StocksDailyPrice> StocksDailyPrices { get; set; }
-
+        public DbSet<BuyingPower> BuyingPowers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Property Configurations
             modelBuilder.ApplyConfiguration(new Core.Data.Configuration.StockMap());
+            modelBuilder.ApplyConfiguration(new Core.Data.Configuration.StockGroupMap());
+            modelBuilder.ApplyConfiguration(new Core.Data.Configuration.StockDailyPriceMap());
+            modelBuilder.ApplyConfiguration(new Core.Data.Configuration.BuyingPowerMap());
         }
     }
 }

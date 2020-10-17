@@ -12,6 +12,8 @@ namespace MarketAnalyst.Core.Data.General
         public int Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
+        public double PE { get; set; }
+        public double EPS { get; set; }
         public string InfoUrl { get; set; }
     }
 }

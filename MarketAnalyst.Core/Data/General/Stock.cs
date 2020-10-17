@@ -2,9 +2,6 @@
 using MarketAnalyst.Core.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MarketAnalyst.Core.Data.General
 {
@@ -12,16 +9,20 @@ namespace MarketAnalyst.Core.Data.General
     {
         public int Id { get; set; }
         public string Code { get; set; }
+        public string UniqueCode { get; set; }
         public string EnglishSign { get; set; }
         public string EnglishName { get; set; }
         public string PersianSign { get; set; }
         public string PersianName { get; set; }
         public StockGroup StockGroup { get; set; }
         public int StockGroupId { get; set; }
+        public MarketTypeEnum MarketType { get; set; }
         public SupervisionLevelEnum SupervisionLevel { get; set; }
         public int StocksCount { get; set; }
         public int BaseVolume { get; set; }
         public double FloatingStock { get; set; }
+        public double PE { get; set; }
+        public double EPS { get; set; }
         public int AverageMonthVolume { get; set; }
         public string InfoUrl { get; set; }
         public string Description { get; set; }
@@ -44,7 +45,7 @@ namespace MarketAnalyst.Core.Data.Configuration
             builder.HasOne(e => e.StockGroup)
                 .WithMany()
                 .HasForeignKey(e => e.StockGroupId)
-                .OnDelete(DeleteBehavior.Cascade); 
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
