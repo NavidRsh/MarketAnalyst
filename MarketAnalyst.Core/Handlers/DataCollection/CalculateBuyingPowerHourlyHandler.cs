@@ -27,6 +27,7 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                 {
                     Enums.SupervisionLevelEnum.HighPriority
                 });
+
             var priceListToAdd = new List<Data.General.StocksDailyPrice>();
             foreach (var stock in stocksList)
             {
@@ -35,8 +36,8 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                 {
                     try
                     {
-                        //string url = "http://members.tsetmc.com/tsev2/data/InstTradeHistory.aspx?i=51617145873056483&Top=999999&A=0";
-                        string url = "http://www.tsetmc.com/Loader.aspx?ParTree=151311&i=" + stock.UniqueCode; 
+
+                        string url = "http://www.tsetmc.com/tsev2/data/instinfofast.aspx?i=" + stock.UniqueCode + "&c=57%20";
                         //ارسال درخواست برای گرفتن سابقه نمادها
                         System.Threading.Thread.Sleep(100);
                         var headers = new Dictionary<string, string>();
@@ -51,71 +52,46 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                         {
                             //ثبت اطلاعات نمادهای موجود در لیست
                             var records = history.Split(';');
-                            var previouslySavedDates = await _unitOfWork.StocksDailyPriceService.GetDates(stock.Id);
-
-
-                            foreach (var record in records)
+                            if (records.Length > 4)
                             {
-                                string[] itemsData = record.Split('@');
-                                if (itemsData[0].Length == 8)
+                                var buyingPowerRecord = records[4];
+                                var powerInfo = buyingPowerRecord.Split(',');
+                                if (powerInfo.Length > 8)
                                 {
-                                    DateTime date = new System.DateTime(Helpers.Convertions.ToInt(itemsData[0].Substring(0, 4)),
-                                        Helpers.Convertions.ToInt(itemsData[0].Substring(4, 2)),
-                                        Helpers.Convertions.ToInt(itemsData[0].Substring(6, 2)));
+                                    int totalBuyPersonVolume = Helpers.Convertions.ToInt(powerInfo[0]);
+                                    int totalBuyLegalVolume = Helpers.Convertions.ToInt(powerInfo[1]);
+                                    int totalSellPersonVolume = Helpers.Convertions.ToInt(powerInfo[3]);
+                                    int totalSellLegalVolume = Helpers.Convertions.ToInt(powerInfo[4]);
+                                    int totalBuyPersonCount = Helpers.Convertions.ToInt(powerInfo[5]);
+                                    int totalBuyLegalCount = Helpers.Convertions.ToInt(powerInfo[6]);
+                                    int totalSellPersonCount = Helpers.Convertions.ToInt(powerInfo[8]);
+                                    int totalSellLegalCount = Helpers.Convertions.ToInt(powerInfo[9]);
 
-
-                                    //if (!await _unitOfWork.StocksDailyPriceService.Any(stock.Id, date))
-                                    if (!previouslySavedDates.Any(a => a.Date == date.Date))
+                                    await _unitOfWork.BuyingPowerService.Add(new Data.General.BuyingPower()
                                     {
-                                        double highest = Helpers.Convertions.Todouble(itemsData[1]);
-                                        double lowest = Helpers.Convertions.Todouble(itemsData[2]);
-                                        double final = Helpers.Convertions.Todouble(itemsData[3]);
-                                        double last = Helpers.Convertions.Todouble(itemsData[4]);
-                                        double initial = Helpers.Convertions.Todouble(itemsData[5]);
-                                        double previousDay = Helpers.Convertions.Todouble(itemsData[6]);
-
-                                        double finalChange = final - previousDay;
-                                        double finalChangePercent = previousDay != 0 ? finalChange * 100 / previousDay : 0;
-
-                                        double lastChange = last - previousDay;
-                                        double lastChangePercent = previousDay != 0 ? lastChange * 100 / previousDay : 0;
-
-                                        double value = Helpers.Convertions.Todouble(itemsData[7]);
-                                        long volume = Helpers.Convertions.ToLong(itemsData[8]);
-                                        int count = Helpers.Convertions.ToInt(itemsData[9]);
-
-                                        var newItem = new Data.General.StocksDailyPrice()
-                                        {
-                                            InitialPrice = Math.Round(initial, 0),
-                                            FinalPrice = Math.Round(final, 0),
-                                            LastPrice = Math.Round(last, 0),
-                                            LowestPrice = Math.Round(lowest, 0),
-                                            HighestPrice = Math.Round(highest, 0),
-                                            Date = date,
-                                            StockId = stock.Id,
-                                            LastPriceChange = Math.Round(lastChange, 0),
-                                            LastPriceChangePercent = Math.Round(lastChangePercent, 4),
-                                            FinalPriceChange = Math.Round(finalChange, 0),
-                                            FinalPriceChangePercent = Math.Round(finalChangePercent, 4),
-                                            DealsCount = count,
-                                            DealsValue = Math.Round((decimal)value, 0),
-                                            DealsVolume = volume,
-                                            PreviousDayPrice = Math.Round(previousDay, 0),
-                                        };
-
-                                        priceListToAdd.Add(newItem);
-                                        //await _unitOfWork.StocksDailyPriceService.AddRange(new List<Data.General.StocksDailyPrice>() { newItem });
-                                        //await _unitOfWork.SaveAsync();
-                                    }
-
+                                        StockId = stock.Id,
+                                        Date = DateTime.Now.Date,
+                                        TotalBuyPersonVolume = totalBuyPersonVolume,
+                                        TotalBuyLegalVolume = totalBuyLegalVolume,
+                                        TotalSellPersonVolume = totalSellPersonVolume,
+                                        TotalSellLegalVolume = totalSellLegalVolume,
+                                        TotalBuyPersonCount = totalBuyPersonCount,
+                                        TotalBuyLegalCount = totalBuyLegalCount,
+                                        TotalSellPersonCount = totalSellPersonCount,
+                                        TotalSellLegalCount = totalSellLegalCount,
+                                        TotalPersonBuyingPower = (totalBuyPersonCount != 0 && totalSellPersonCount != 0) ? Math.Round(((double)totalBuyPersonVolume / (double)totalBuyPersonCount) / ((double)totalSellPersonVolume / (double)totalSellPersonCount), 2) : 0,
+                                        TotalLegalBuyingPower = (totalBuyLegalCount != 0 && totalSellLegalCount != 0 ) ? Math.Round(((double)totalBuyLegalVolume / (double)totalBuyLegalCount) / ((double)totalSellLegalVolume / (double)totalSellLegalCount), 2) : 0,
+                                        RegisterDateTime = DateTime.Now
+                                    }); ;
+                                    await _unitOfWork.SaveAsync();
                                 }
+
                             }
-                            if (priceListToAdd.Count > 0)
-                            {
-                                await _unitOfWork.StocksDailyPriceService.AddRange(priceListToAdd);
-                                await _unitOfWork.SaveAsync();
-                            }
+                            else
+                            { }
                         }
+                        else
+                        { }
                     }
                     catch (Exception exc)
                     {

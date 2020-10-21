@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj": {}
+    "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj": {}
   },
   "projects": {
-    "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
+    "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+        "projectUniqueName": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
         "projectName": "MarketAnalyst.Core",
-        "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
-        "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
-        "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
+        "projectPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+        "packagesPath": "C:\\Users\\roshdiye-pc\\.nuget\\packages\\",
+        "outputPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\roshdiye-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,14 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "AngleSharp.Js": {
+              "target": "Package",
+              "version": "[0.14.0, )"
+            },
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.24, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"
@@ -79,83 +87,33 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\MarketAnalyst.InfraStructure.csproj": {
+    "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\MarketAnalyst.InfraStructure.csproj",
-        "projectName": "MarketAnalyst.InfraStructure",
-        "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\MarketAnalyst.InfraStructure.csproj",
-        "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
-        "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {
-              "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
-                "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj",
+        "projectUniqueName": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj",
         "projectName": "MarketAnalyst.Api",
-        "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj",
-        "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
-        "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst\\obj\\",
+        "projectPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Api.csproj",
+        "packagesPath": "C:\\Users\\roshdiye-pc\\.nuget\\packages\\",
+        "outputPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\roshdiye-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,8 +126,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\MarketAnalyst.InfraStructure.csproj": {
-                "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyzer\\MarketAnalyst\\MarketAnalyst.InfraStructure\\MarketAnalyst.InfraStructure.csproj"
+              "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
+                "projectPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj"
               }
             }
           }
@@ -214,10 +172,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

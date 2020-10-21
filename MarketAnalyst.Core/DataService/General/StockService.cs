@@ -46,6 +46,7 @@ namespace MarketAnalyst.Core.DataService.General
                 {
                     Id = a.Id,
                     Code = a.Code,
+                    PersianName = a.PersianName,
                     UniqueCode = a.UniqueCode,
                     SupervisionLevel = a.SupervisionLevel
                 });

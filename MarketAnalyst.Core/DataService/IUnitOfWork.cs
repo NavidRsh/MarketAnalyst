@@ -13,6 +13,7 @@ namespace MarketAnalyst.Core.DataService
         General.StockService StockService { get; }
         General.StockGroupService StockGroupService { get; }
         General.StocksDailyPriceService StocksDailyPriceService { get; }
+        General.BuyingPowerService BuyingPowerService { get; }
     }
 
     public class AddItemResult<T>

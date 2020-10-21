@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarketAnalyst.Core.DataService
 {
-    public class UnitOfWork:IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         Data.MarketContext _context { get; set; }
         public UnitOfWork(Data.MarketContext context)
@@ -16,6 +16,7 @@ namespace MarketAnalyst.Core.DataService
         public General.StockService StockService => new General.StockService(_context);
         public General.StockGroupService StockGroupService => new General.StockGroupService(_context);
         public General.StocksDailyPriceService StocksDailyPriceService => new General.StocksDailyPriceService(_context);
+        public General.BuyingPowerService BuyingPowerService => new General.BuyingPowerService(_context);
         public async Task SaveAsync()
         {
             //try
