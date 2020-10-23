@@ -22,7 +22,22 @@ namespace MarketAnalyst.Core.DataService.General
         {
             await _context.BuyingPowers.AddAsync(BuyingPower);            
         }
-        
 
+        public async Task<BuyingPower> GetBuyingPower(int stockId, DateTime date, TimeSpan endTime)
+        {
+            return await _context.BuyingPowers
+                .Where(a => a.StockId == stockId && a.Date == date.Date && a.EndTime == endTime)
+                .FirstOrDefaultAsync(); 
+            
+        }
+
+        public async Task<BuyingPower> GetLastBuyingPowerOfDay(int stockId, DateTime date, TimeSpan endTime)
+        {
+            return await _context.BuyingPowers
+                .Where(a => a.StockId == stockId && a.Date == date.Date)
+                .OrderByDescending(a => a.Date).ThenBy(a => a.EndTime)
+                .FirstOrDefaultAsync();
+
+        }
     }
 }

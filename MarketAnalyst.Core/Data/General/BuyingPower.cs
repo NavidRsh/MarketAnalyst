@@ -31,6 +31,14 @@ namespace MarketAnalyst.Core.Data.General
         public double TotalPersonBuyingPower { get; set; }
         public double TotalLegalBuyingPower { get; set; }
         /// <summary>
+        /// متوسط خرید حقیقی در طول روز
+        /// </summary>
+        public double TotalAveragePersonBuy { get; set; }
+        /// <summary>
+        /// متوسط خرید حقوقی در طول روز 
+        /// </summary>
+        public double TotalAverageLegalBuy { get; set; }
+        /// <summary>
         /// اعداد تفاضلی به دست آمده از مقایسه با اعداد قبلی 
         /// </summary>
         public int BuyPersonCount { get; set; }
@@ -46,6 +54,14 @@ namespace MarketAnalyst.Core.Data.General
 
         public double PersonBuyingPower { get; set; }
         public double LegalBuyingPower { get; set; }
+        /// <summary>
+        /// متوسط خرید حقیقی در بازه زمانی رکورد
+        /// </summary>
+        public double AveragePersonBuy { get; set; }
+        /// <summary>
+        /// متوسط خرید حقوقی در بازه زمانی رکورد
+        /// </summary>
+        public double AverageLegalBuy { get; set; }
         public DateTime RegisterDateTime { get; set; }
 
         

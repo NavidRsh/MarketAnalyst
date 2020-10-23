@@ -5815,23 +5815,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\roshdiye-pc\\.nuget\\packages\\": {},
+    "C:\\Users\\Navid\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+      "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
       "projectName": "MarketAnalyst.Core",
-      "projectPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
-      "packagesPath": "C:\\Users\\roshdiye-pc\\.nuget\\packages\\",
-      "outputPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
+      "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+      "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
+      "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\roshdiye-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5901,16 +5901,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   },
@@ -5919,7 +5913,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Client 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Client 4.0.20710' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Client",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -5929,7 +5923,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.AspNet.WebApi.Core 4.0.20710' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -5939,7 +5933,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Net.Http",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -5949,7 +5943,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Swashbuckle.Core",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
