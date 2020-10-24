@@ -5,8 +5,8 @@ namespace MarketAnalyst.Core.Data
 {
     public class MarketContext : DbContext
     {
-        string connection = "Data Source=localhost;Initial Catalog=Alborz;User ID=sa;Password=sa_12345;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+        //string connection = "Data Source=localhost;Initial Catalog=Alborz;User ID=sa;Password=sa_12345;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connection = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Alborz;User ID=sa;Password=sa_12345;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public MarketContext(DbContextOptions<MarketContext> options)
         : base(options)
         { }

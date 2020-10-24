@@ -60,6 +60,7 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                 DateTime date = new DateTime(Helpers.Convertions.ToInt(dateString.Substring(0, 4)),
                                     Helpers.Convertions.ToInt(dateString.Substring(4, 2)), Helpers.Convertions.ToInt(dateString.Substring(6, 2)));
                                 var timeString = generalInfo[generalInfo.Length - 1];
+                                timeString = timeString.Length == 5 ? timeString.PadLeft(6, '0') : timeString;
                                 TimeSpan time = new TimeSpan(Helpers.Convertions.ToInt(timeString.Substring(0, 2)), Helpers.Convertions.ToInt(timeString.Substring(2, 2)), Helpers.Convertions.ToInt(timeString.Substring(4, 2)));
 
                                 var lastBuyingPower = await _unitOfWork.BuyingPowerService.GetLastBuyingPowerOfDay(stock.Id, date, time);
@@ -121,8 +122,8 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                             PersonBuyingPower = (buyPersonCount != 0 && sellPersonCount != 0) ? Math.Round(((double)buyPersonVolume / (double)buyPersonCount) / ((double)sellPersonVolume / (double)sellPersonCount), 2) : 0,
                                             FinalPrice = finalPrice,
                                             LastPrice = lastPrice,
-                                            AveragePersonBuy = buyPersonCount > 0 ? (buyPersonVolume / buyPersonCount) * finalPrice : 0,
-                                            AverageLegalBuy = buyLegalCount > 0 ? (buyLegalVolume / buyLegalCount) * finalPrice : 0,
+                                            AveragePersonBuy = buyPersonCount > 0 ? ((double)buyPersonVolume / buyPersonCount) * finalPrice : 0,
+                                            AverageLegalBuy = buyLegalCount > 0 ? ((double)buyLegalVolume / buyLegalCount) * finalPrice : 0,
                                             RegisterDateTime = DateTime.Now                                            
                                         }); 
                                         await _unitOfWork.SaveAsync();
