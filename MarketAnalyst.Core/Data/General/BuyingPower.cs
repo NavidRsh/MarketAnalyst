@@ -51,7 +51,12 @@ namespace MarketAnalyst.Core.Data.General
         public int SellLegalVolume { get; set; }
         public double LastPrice { get; set; }
         public double FinalPrice { get; set; }
-
+        public double PreviousDayPrice { get; set; }
+        public double LastPriceChangePercent { get; set; }
+        public double FinalPriceChangePercent { get; set; }
+        public double FirstPrice { get; set; }
+        public double HighestPrice { get; set; }
+        public double LowestPrice { get; set; }
         public double PersonBuyingPower { get; set; }
         public double LegalBuyingPower { get; set; }
         /// <summary>

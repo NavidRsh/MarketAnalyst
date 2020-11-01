@@ -54,8 +54,13 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                             if (records.Length > 4)
                             {
                                 var generalInfo = records[0].Split(',');
+                                                                
                                 double lastPrice = Helpers.Convertions.Todouble(generalInfo[2]);//آخرین قیمت 
                                 double finalPrice = Helpers.Convertions.Todouble(generalInfo[3]);//قیمت پایانی
+                                double firstPrice = Helpers.Convertions.Todouble(generalInfo[4]);//قیمت بازگشایی روز
+                                double previousDayPrice = Helpers.Convertions.Todouble(generalInfo[5]);//قیمت روز قبل
+                                double highestPrice = Helpers.Convertions.Todouble(generalInfo[6]);//بیشترین قیمت
+                                double lowestPrice = Helpers.Convertions.Todouble(generalInfo[7]);//کمترین قیمت
                                 var dateString = generalInfo[generalInfo.Length - 2];
                                 DateTime date = new DateTime(Helpers.Convertions.ToInt(dateString.Substring(0, 4)),
                                     Helpers.Convertions.ToInt(dateString.Substring(4, 2)), Helpers.Convertions.ToInt(dateString.Substring(6, 2)));
@@ -80,6 +85,8 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                         int totalBuyLegalCount = Helpers.Convertions.ToInt(powerInfo[6]);
                                         int totalSellPersonCount = Helpers.Convertions.ToInt(powerInfo[8]);
                                         int totalSellLegalCount = Helpers.Convertions.ToInt(powerInfo[9]);
+
+
                                         int buyPersonVolume, buyLegalVolume, sellPersonVolume, sellLegalVolume, buyPersonCount, buyLegalCount, sellPersonCount, sellLegalCount;
                                         buyPersonVolume = buyLegalVolume = sellPersonVolume = sellLegalVolume = buyPersonCount = buyLegalCount = sellPersonCount = sellLegalCount = 0; 
                                         if (lastBuyingPower != null)
@@ -122,6 +129,12 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                             PersonBuyingPower = (buyPersonCount != 0 && sellPersonCount != 0) ? Math.Round(((double)buyPersonVolume / (double)buyPersonCount) / ((double)sellPersonVolume / (double)sellPersonCount), 2) : 0,
                                             FinalPrice = finalPrice,
                                             LastPrice = lastPrice,
+                                            LowestPrice = lowestPrice,
+                                            HighestPrice = highestPrice,
+                                            FirstPrice = firstPrice,
+                                            PreviousDayPrice = previousDayPrice,
+                                            LastPriceChangePercent = (lastPrice - previousDayPrice) * 100 / previousDayPrice,
+                                            FinalPriceChangePercent = (finalPrice - previousDayPrice) * 100 / previousDayPrice,
                                             AveragePersonBuy = buyPersonCount > 0 ? ((double)buyPersonVolume / buyPersonCount) * finalPrice : 0,
                                             AverageLegalBuy = buyLegalCount > 0 ? ((double)buyLegalVolume / buyLegalCount) * finalPrice : 0,
                                             RegisterDateTime = DateTime.Now                                            
