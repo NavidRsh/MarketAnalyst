@@ -77,17 +77,18 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                     var powerInfo = buyingPowerRecord.Split(',');
                                     if (powerInfo.Length > 8)
                                     {
-                                        int totalBuyPersonVolume = Helpers.Convertions.ToInt(powerInfo[0]);
-                                        int totalBuyLegalVolume = Helpers.Convertions.ToInt(powerInfo[1]);
-                                        int totalSellPersonVolume = Helpers.Convertions.ToInt(powerInfo[3]);
-                                        int totalSellLegalVolume = Helpers.Convertions.ToInt(powerInfo[4]);
+                                        long totalBuyPersonVolume = Helpers.Convertions.ToLong(powerInfo[0]);
+                                        long totalBuyLegalVolume = Helpers.Convertions.ToLong(powerInfo[1]);
+                                        long totalSellPersonVolume = Helpers.Convertions.ToLong(powerInfo[3]);
+                                        long totalSellLegalVolume = Helpers.Convertions.ToLong(powerInfo[4]);
                                         int totalBuyPersonCount = Helpers.Convertions.ToInt(powerInfo[5]);
                                         int totalBuyLegalCount = Helpers.Convertions.ToInt(powerInfo[6]);
                                         int totalSellPersonCount = Helpers.Convertions.ToInt(powerInfo[8]);
                                         int totalSellLegalCount = Helpers.Convertions.ToInt(powerInfo[9]);
 
 
-                                        int buyPersonVolume, buyLegalVolume, sellPersonVolume, sellLegalVolume, buyPersonCount, buyLegalCount, sellPersonCount, sellLegalCount;
+                                        long buyPersonVolume, buyLegalVolume, sellPersonVolume, sellLegalVolume;
+                                        int buyPersonCount, buyLegalCount, sellPersonCount, sellLegalCount;
                                         buyPersonVolume = buyLegalVolume = sellPersonVolume = sellLegalVolume = buyPersonCount = buyLegalCount = sellPersonCount = sellLegalCount = 0; 
                                         if (lastBuyingPower != null)
                                         {
@@ -100,7 +101,8 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                             sellPersonCount = totalSellPersonCount - lastBuyingPower.TotalSellPersonCount;
                                             sellLegalCount = totalSellLegalCount - lastBuyingPower.TotalSellLegalCount;
                                         }
-                                        await _unitOfWork.BuyingPowerService.Add(new Data.General.BuyingPower()
+
+                                        var powerIns = new Data.General.BuyingPower()
                                         {
                                             StockId = stock.Id,
                                             Date = date,
@@ -137,8 +139,10 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
                                             FinalPriceChangePercent = (finalPrice - previousDayPrice) * 100 / previousDayPrice,
                                             AveragePersonBuy = buyPersonCount > 0 ? ((double)buyPersonVolume / buyPersonCount) * finalPrice : 0,
                                             AverageLegalBuy = buyLegalCount > 0 ? ((double)buyLegalVolume / buyLegalCount) * finalPrice : 0,
-                                            RegisterDateTime = DateTime.Now                                            
-                                        }); 
+                                            RegisterDateTime = DateTime.Now
+                                        }; 
+
+                                        await _unitOfWork.BuyingPowerService.Add(powerIns); 
                                         await _unitOfWork.SaveAsync();
                                     }
                                 }
