@@ -37,7 +37,10 @@ namespace MarketAnalyst
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MarketContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IHttpCallService, HttpCallService>(); 
-            services.AddScoped<IUnitOfWork, UnitOfWork>(); 
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<Core.Services.IBuyingPowerService, Core.Services.BuyingPowerService>();
+            services.AddHostedService<Core.Services.HostedServices.CalculatePowerHostedService>(); 
+
             services.AddSwaggerDocumentation();
 
             RegisterAllMediatRHandlers(services);

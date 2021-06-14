@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {}
+    "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {}
   },
   "projects": {
-    "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
+    "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+        "projectUniqueName": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
         "projectName": "MarketAnalyst.Core",
-        "projectPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
-        "packagesPath": "C:\\Users\\roshdiye-pc\\.nuget\\packages\\",
-        "outputPath": "D:\\AlborzDistribution\\Tasks\\Software\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
+        "projectPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\MarketAnalyst.Core.csproj",
+        "packagesPath": "C:\\Users\\Navid\\.nuget\\packages\\",
+        "outputPath": "E:\\Tasks\\Stocks\\MarketAnalyst\\MarketAnalyst\\MarketAnalyst.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\roshdiye-pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Navid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +31,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -40,6 +43,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "AngleSharp.Js": {
               "target": "Package",
@@ -96,7 +100,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

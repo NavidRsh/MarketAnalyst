@@ -53,3 +53,6 @@ D:\AlborzDistribution\Tasks\Software\MarketAnalyst\MarketAnalyst\obj\Debug\netco
 D:\AlborzDistribution\Tasks\Software\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.Api.dll
 D:\AlborzDistribution\Tasks\Software\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.Api.pdb
 D:\AlborzDistribution\Tasks\Software\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.Api.genruntimeconfig.cache
+E:\Tasks\Stocks\MarketAnalyst\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\appsettings.Development.json
+E:\Tasks\Stocks\MarketAnalyst\MarketAnalyst\MarketAnalyst\bin\Debug\netcoreapp2.2\appsettings.json
+E:\Tasks\Stocks\MarketAnalyst\MarketAnalyst\MarketAnalyst\obj\Debug\netcoreapp2.2\MarketAnalyst.Api.genruntimeconfig.cache
