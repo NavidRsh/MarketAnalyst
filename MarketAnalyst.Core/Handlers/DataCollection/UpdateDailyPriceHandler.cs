@@ -25,23 +25,19 @@ namespace MarketAnalyst.Core.Handlers.DataCollection
             var stocksList = await _unitOfWork.StockService.GetStocksGeneralInfo(
                 new List<Enums.SupervisionLevelEnum>()
                 {
-                    Enums.SupervisionLevelEnum.GeneralSupervision,
                     Enums.SupervisionLevelEnum.HighPriority
                 });
             var priceListToAdd = new List<Data.General.StocksDailyPrice>();
             foreach (var stock in stocksList)
-            {
-                if (stock.Id < 1214)
-                {
-                    continue;
-                }
+            {               
                 priceListToAdd.Clear();
                 if (!string.IsNullOrEmpty(stock.UniqueCode))
                 {
                     try
                     {
                         //string url = "http://members.tsetmc.com/tsev2/data/InstTradeHistory.aspx?i=51617145873056483&Top=999999&A=0";
-                        string url = "http://members.tsetmc.com/tsev2/data/InstTradeHistory.aspx?i=" + stock.UniqueCode + "&Top=999999&A=0";
+                        //string url = "http://members.tsetmc.com/tsev2/data/InstTradeHistory.aspx?i=" + stock.UniqueCode + "&Top=999999&A=0";
+                        string url = "http://members.tsetmc.com/tsev2/data/InstTradeHistory.aspx?i=" + stock.UniqueCode + "&Top=30&A=0";
                         //ارسال درخواست برای گرفتن سابقه نمادها
                         System.Threading.Thread.Sleep(100);
                         var headers = new Dictionary<string, string>();

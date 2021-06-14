@@ -97,25 +97,29 @@ namespace MarketAnalyst.Core.Services.ExternalApi
         {
             try
             {
-                using (WebResponse response = e.Response)
+                if (e.Response != null)
                 {
-                    HttpWebResponse httpResponse = (HttpWebResponse)response;
-                    using (Stream data = response.GetResponseStream())
-                    using (var reader = new StreamReader(data))
+                    using (WebResponse response = e.Response)
                     {
+                        HttpWebResponse httpResponse = (HttpWebResponse)response;
+                        using (Stream data = response.GetResponseStream())
+                        using (var reader = new StreamReader(data))
+                        {
 
-                        var json = await reader.ReadToEndAsync();
-                        //Log.Warning(Newtonsoft.Json.JsonConvert.SerializeObject(new
-                        //{
-                        //    Name = "ALL EXTERNAL ERROR1",
-                        //    Step = 100,
-                        //    Object = JsonConvert.SerializeObject(json)
-                        //}));
-                        var ErrorObject = JsonConvert.DeserializeObject<List<ErrorDto>>(json);
-                        return ErrorObject;
+                            var json = await reader.ReadToEndAsync();
+                            //Log.Warning(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                            //{
+                            //    Name = "ALL EXTERNAL ERROR1",
+                            //    Step = 100,
+                            //    Object = JsonConvert.SerializeObject(json)
+                            //}));
+                            var ErrorObject = JsonConvert.DeserializeObject<List<ErrorDto>>(json);
+                            return ErrorObject;
 
+                        }
                     }
                 }
+                return null; 
             }
             catch (Exception ex)
             {

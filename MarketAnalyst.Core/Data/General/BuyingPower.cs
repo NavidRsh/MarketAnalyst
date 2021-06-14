@@ -22,12 +22,12 @@ namespace MarketAnalyst.Core.Data.General
         /// </summary>
         public int TotalBuyPersonCount { get; set; }
         public int TotalBuyLegalCount { get; set; }
-        public int TotalBuyPersonVolume { get; set; }
-        public int TotalBuyLegalVolume { get; set; }
+        public long TotalBuyPersonVolume { get; set; }
+        public long TotalBuyLegalVolume { get; set; }
         public int TotalSellPersonCount { get; set; }
         public int TotalSellLegalCount { get; set; }
-        public int TotalSellPersonVolume { get; set; }
-        public int TotalSellLegalVolume { get; set; }
+        public long TotalSellPersonVolume { get; set; }
+        public long TotalSellLegalVolume { get; set; }
         public double TotalPersonBuyingPower { get; set; }
         public double TotalLegalBuyingPower { get; set; }
         /// <summary>
@@ -43,12 +43,12 @@ namespace MarketAnalyst.Core.Data.General
         /// </summary>
         public int BuyPersonCount { get; set; }
         public int BuyLegalCount { get; set; }
-        public int BuyPersonVolume { get; set; } 
-        public int BuyLegalVolume { get; set; }
+        public long BuyPersonVolume { get; set; } 
+        public long BuyLegalVolume { get; set; }
         public int SellPersonCount { get; set; }
         public int SellLegalCount { get; set; }
-        public int SellPersonVolume { get; set; }
-        public int SellLegalVolume { get; set; }
+        public long SellPersonVolume { get; set; }
+        public long SellLegalVolume { get; set; }
         public double LastPrice { get; set; }
         public double FinalPrice { get; set; }
         public double PreviousDayPrice { get; set; }
