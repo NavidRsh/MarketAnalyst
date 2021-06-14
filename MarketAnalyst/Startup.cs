@@ -56,9 +56,18 @@ namespace MarketAnalyst
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+            //app.UseHttpsRedirection();
+            //app.UseMvc();
 
+            app.UseRouting();
+
+            app.UseHttpsRedirection();
+
+            app.UseCors("MyPolicy");
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             app.UseSwaggerDocumentation();
         }
 
