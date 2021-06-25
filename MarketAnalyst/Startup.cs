@@ -39,6 +39,7 @@ namespace MarketAnalyst
             services.AddScoped<IHttpCallService, HttpCallService>(); 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<Core.Services.IBuyingPowerService, Core.Services.BuyingPowerService>();
+            services.AddScoped<Core.Services.IDailyPriceService, Core.Services.DailyPriceService>();
             services.AddHostedService<Core.Services.HostedServices.CalculatePowerHostedService>(); 
 
             services.AddSwaggerDocumentation();

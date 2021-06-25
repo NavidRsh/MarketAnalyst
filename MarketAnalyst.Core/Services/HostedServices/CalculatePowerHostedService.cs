@@ -19,15 +19,44 @@ namespace MarketAnalyst.Core.Services.HostedServices
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                using (var scope = _scopeFactory.CreateScope())
+                var dayOfWeek = System.DateTime.Now.DayOfWeek;
+                if (dayOfWeek == DayOfWeek.Thursday || dayOfWeek == DayOfWeek.Thursday)
                 {
-                    var powerService = scope.ServiceProvider.GetRequiredService(typeof(Core.Services.IBuyingPowerService));
-                    await ((Core.Services.IBuyingPowerService)powerService).CalcultePower();
+                    //روزهای تعطیل تاخیر 2 ساعته
+                    await Task.Delay(2 * 3600 * 1000, stoppingToken);
+                }
+                else
+                {
+                    if (System.DateTime.Now.TimeOfDay > new TimeSpan(9, 5, 0) &&
+                        System.DateTime.Now.TimeOfDay < new TimeSpan(13, 0, 0))
+                    {
+                        using (var scope = _scopeFactory.CreateScope())
+                        {
+                            var powerService = scope.ServiceProvider.GetRequiredService(typeof(Core.Services.IBuyingPowerService));
+                            await ((Core.Services.IBuyingPowerService)powerService).CalcultePower();
 
-                    await Task.Delay(60000, stoppingToken);
+                            //تاخیر 10 دقیقه ای
+                            await Task.Delay(600 * 1000, stoppingToken);
+                        }
+                    }
+                    else//خارج از ساعات باز بودن بازار 
+                    {
+                        //محاسبه آمار روزانه 
+                        if (Data.General.Setting.LastDailyPriceCalculation == null ||
+                            Data.General.Setting.LastDailyPriceCalculation.Value.Date < DateTime.Now.Date)
+                        {
+                            using (var scope = _scopeFactory.CreateScope())
+                            {
+                                var dailyPriceService = scope.ServiceProvider.GetRequiredService(typeof(Core.Services.IDailyPriceService));
+                                await ((Core.Services.IDailyPriceService)dailyPriceService).CalculateDailyPrice(); 
+                            }
+                        }
+                        //تاخیر نیم ساعته
+                        await Task.Delay(1800 * 1000, stoppingToken);
+                    }
                 }
             }
-
         }
     }
+
 }

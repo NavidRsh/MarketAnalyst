@@ -38,7 +38,8 @@ namespace MarketAnalyst.Core.DataService.General
         {
             return await _context.StocksDailyPrices
                 .Where(a => a.StockId == stockId)
-                .Select(a => a.Date).ToListAsync(); 
+                .OrderByDescending(a => a.Date)
+                .Select(a => a.Date).Take(30).ToListAsync(); 
         }
 
     }
